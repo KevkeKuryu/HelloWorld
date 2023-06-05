@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="com.example.helloworld"
+        version="1.0.0">
+
+    <name>HelloWorld</name>
+<js-module src="www/HelloWorld.js" name="HelloWorld">
+<clobbers target="HelloWorld" />
+</js-module>
+
+    <platform name="android">
+<config-file parent="/*" target="res/xml/config.xml">
+<feature name="HelloWorld">
+<param name="android-package" value="com.example.helloworld.HelloWorld" />
+</feature>
+</config-file>
+<source-file src="src/android/HelloWorld.java" target-dir="src/com/example/helloworld" />
+</platform>
+
+</plugin>
